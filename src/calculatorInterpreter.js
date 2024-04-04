@@ -4,6 +4,9 @@ const expression = prompt("Enter a maths expression ");
 let currentCharPosition = 0
 let look;
 
+getChar();
+
+
 function getChar(){
   if( currentCharPosition < expression.length){
     look = expression.charAt(currentCharPosition);
@@ -19,12 +22,42 @@ function getNum(){
   return num;
 }
 
-getChar();
-let first = getNum();
-let operator = look;
-getChar();
-let second = getNum()
-console.log(first);
-console.log(operator);
-console.log(second);
-console.log(first + second);
+function matchAndEat(char){
+  if( char == look ){
+    getChar();
+  } else {
+    console.error("Error: occured")
+  }
+}
+
+function term(){
+  return getNum();
+}
+
+function add(){
+  matchAndEat('+');
+  return term();
+}
+
+function subtract(){
+  matchAndEat('-');
+  return term();
+}
+
+function arithmeticExpression() {
+ result = term();
+
+  switch (look) {
+    case '+':
+      result = result + add();
+      break;
+    case '-': 
+      result = result - subtract();
+      break;
+  }
+
+  return result;
+}
+
+
+console.log(arithmeticExpression());
