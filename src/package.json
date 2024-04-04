@@ -1,0 +1,22 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "description": "",
+  "main": "calculatorInterpreter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheoMKgosi/interpreter.git"
+  },
+  "author": "Theo Kgosiemang",
+  "license": "BSD 3-Clause License",
+  "bugs": {
+    "url": "https://github.com/TheoMKgosi/interpreter/issues"
+  },
+  "homepage": "https://github.com/TheoMKgosi/interpreter#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
